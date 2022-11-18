@@ -1,0 +1,122 @@
+@function tableFn($n) {
+  @return ($n/802 * 100%);
+}
+
+.table {
+  max-width: 802px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.search {
+  width: 100%;
+  height: 40px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  border: 0;
+  outline: 0;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &_link {
+    height: 32px;
+    background: #FCFCFC;
+    border: 0.5px solid #969494;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 16px;
+    cursor: pointer;
+
+    &.active {
+      background: linear-gradient(93.65deg, #E9F3FA 0%, rgba(186, 227, 255, 0.15) 102.51%);
+      /* text/Text */
+
+      border: 0.5px solid #083352;
+      /* drop button */
+
+      box-shadow: -2px 2px 40px rgba(32, 53, 68, 0.11);
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    background: #083352;
+    border-radius: 4px;
+    padding: 0 24px;
+  }
+
+  &__body {
+
+  }
+
+  &__caption {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    color: #FFFFFF;
+    padding: 9px 0px;
+    flex-grow: 1;
+  }
+
+  .logo {
+    width: tableFn(40);
+  }
+
+  .company {
+    width: tableFn(158);
+
+  }
+
+  .visitors {
+    width: tableFn(65);
+  }
+
+  .transactions {
+    width: tableFn(57);
+  }
+
+  .control {
+    width: tableFn(200);
+  }
+
+
+  &__row {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+  }
+
+  &__box {
+    flex-grow: 1;
+    animation: fadeIn .3s;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

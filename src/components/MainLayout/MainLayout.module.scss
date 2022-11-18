@@ -1,0 +1,24 @@
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: #FCF9F8;
+  padding-top: 24px;
+}
+
+.wrapper {
+  max-width: 85.16%;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-rows: 80px 1fr;
+  flex-grow: 1;
+}
+
+.sidebar {
+  @media (max-width: 1824px) {
+    width: 228px;
+  }
+}
