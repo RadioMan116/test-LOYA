@@ -108,6 +108,53 @@
   &__box {
     flex-grow: 1;
     animation: fadeIn .3s;
+
+    &.control {
+      display: flex;
+      :not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+
+    .control {
+      &__icon {
+        background: #FAF8F8;
+        border-radius: 2px;
+        overflow: hidden;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+          background: var(--main);
+
+          * {
+            fill: white;
+          }
+        }
+      }
+
+      &__auth {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 12px;
+        background: linear-gradient(93.65deg, rgba(247, 207, 228, 0.24) 0%, rgba(233, 226, 230, 0.3) 102.51%);
+        border-radius: 4px;
+        text-decoration: unset;
+        transition: .3s;
+
+        &:hover {
+          background: var(--main);
+          color: white;
+        }
+      }
+    }
   }
 
   .empty {
