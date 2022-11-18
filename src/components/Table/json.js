@@ -1,8 +1,8 @@
 export const sortInfo = [
-    {title:'Все',label:'all'},
-    {title:'Активные',label:'active'},
-    {title:'Не активные',label:'inactive'},
-    {title:'Архив',label:'archive'},
+    {title: 'Все', label: 'all'},
+    {title: 'Активные', label: 'active'},
+    {title: 'Не активные', label: 'inactive'},
+    {title: 'Архив', label: 'archive'},
 ]
 
 export const tableHeader = [

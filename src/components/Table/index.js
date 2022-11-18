@@ -4,7 +4,6 @@ import {company, sortInfo, tableHeader} from "./json";
 import Search from "../Search";
 
 
-
 const searchHandler = (state, fn, searchArr) => {
     const {search, status} = state
     let array = []
@@ -42,22 +41,24 @@ const List = ({arr}) => {
                                              key={el.id}>{el.title}</span>)}
             </div>
             <div className={styles.list__body}>
-                {arr.map(el => (
-                    <div className={`${styles.list__row}`} key={el.title}>
-                        <div className={`${styles.list__box} ${styles.logo}`}>
-                            <img src={'../../table-logo.svg'} alt=""/>
-                        </div>
-                        <div className={`${styles.list__box} ${styles.company}`}>{`Логин  ${el.title}`}
-                        </div>
-                        <div className={`${styles.list__box} ${styles.visitors}`}>{el.visitors}
-                        </div>
-                        <div className={`${styles.list__box} ${styles.transactions}`}>${el.transactions}
-                        </div>
-                        <div className={`${styles.list__box} ${styles.control}`}>
-                            <img src={'../../control-icon.svg'} alt="" style={{marginRight: '24px'}}/>
-                            <img src={'../../auth.svg'} alt=""/>
-                        </div>
-                    </div>))}
+                {arr.length !== 0 ? arr.map(el => (
+                        <div className={`${styles.list__row}`} key={el.title}>
+                            <div className={`${styles.list__box} ${styles.logo}`}>
+                                <img src={'../../table-logo.svg'} alt=""/>
+                            </div>
+                            <div className={`${styles.list__box} ${styles.company}`}>{`Логин  ${el.title}`}
+                            </div>
+                            <div className={`${styles.list__box} ${styles.visitors}`}>{el.visitors}
+                            </div>
+                            <div className={`${styles.list__box} ${styles.transactions}`}>${el.transactions}
+                            </div>
+                            <div className={`${styles.list__box} ${styles.control}`}>
+                                <img src={'../../control-icon.svg'} alt="" style={{marginRight: '24px'}}/>
+                                <img src={'../../auth.svg'} alt=""/>
+                            </div>
+                        </div>))
+                    : <div className={styles.empty}/>
+                }
             </div>
         </div>
     )
